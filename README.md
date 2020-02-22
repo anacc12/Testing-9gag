@@ -73,8 +73,37 @@ It will stop just before uploading the image.
 ### com.test9gag.qa
 * base - consists of TestBase class which all of the other classes inherit. Method Initialization sets the webdriver and
 the necessary timeouts. 
+```
+public static void initialization(){
+        String browserName = prop.getProperty("browser");
+        if(browserName.equals("chrome")){
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\Korisnik\\chromedriver.exe");
+            driver = new ChromeDriver();
+        } else if(browserName.equals("FF")){
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\Korisnik\\geckodriver-v0.26.0-win64\\geckodriver.exe");
+            driver = new FirefoxDriver();
+        }
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+        driver.get(prop.getProperty("url"));
+    }
+  ```
 * util - consists of TestUtil class which contains page load timeout and implicit wait constants in seconds.
+
 * config - consists of test configuration file which contains properties (username, password, urls...)
+ ```
+url = https://9gag.com/
+imgUrl = https://upload.wikimedia.org/wikipedia/commons/b/ba/Flower_jtca001.jpg
+shopUrl = https://shop.9gag.com/
+username = nonameuserx
+password = A123456A
+search = testing
+postDescription = Some average description
+browser = chrome
+ ```
+
 * pages - consists of pages on which the tests will be performed (login, home, search and shop pages) 
 
 #### LoginPage
