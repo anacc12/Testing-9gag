@@ -29,23 +29,23 @@ public class HomePageTest extends TestBase {
         hPage = lPage.login(prop.getProperty("username"), prop.getProperty("password"));
     }
 
-    @Test(priority = 1)
+    @Test
     public void uploadImageTest(){
         hPage.uploadImage(prop.getProperty("imgUrl"), prop.getProperty("postDescription"));
     }
 
-    @Test(priority = 2)
+    @Test
     public void changeAvatarTest(){
         hPage.changeAvatar();
     }
 
 
-    @Test(priority = 3)
+    @Test
     public void clickOnShopButton(){
         shopPage = hPage.clickOnShop();
     }
 
-    @Test(priority = 4)
+    @Test
     public void clickOnSearchButton(){
         searchPage = hPage.clickOnSearch(prop.getProperty("search"));
     }

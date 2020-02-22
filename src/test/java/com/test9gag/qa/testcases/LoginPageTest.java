@@ -23,24 +23,19 @@ public class LoginPageTest extends TestBase {
         lPage.exitPopUp();
     }
 
-    @Test(priority = 1)
+    @Test
     public void loginPageTitleTest(){
         String title = lPage.validateTitle();
         Assert.assertEquals(title, "9GAG: Go Fun The World");
     }
 
-    @Test(priority = 2)
+    @Test
     public void loginPageLogoTest(){
         boolean logo = lPage.validateLogo();
         Assert.assertTrue(logo);
     }
 
-    @Test(priority = 3)
-    public void loginPageUpvoteTest(){
-        lPage.upvote();
-    }
-
-    @Test(priority = 4)
+    @Test
     public void loginPageLoginTest(){
         hPage = lPage.login(prop.getProperty("username"), prop.getProperty("password"));
     }

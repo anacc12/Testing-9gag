@@ -23,12 +23,12 @@ public class SearchPageTest extends TestBase {
         searchPage = hPage.clickOnSearch(prop.getProperty("search"));
     }
 
-    @Test(priority = 1)
+    @Test
     public void searchBarTextTest(){
         searchPage.searchBarText(prop.getProperty("search"));
     }
 
-    @Test(priority = 2)
+    @Test
     public void isSearchTagPresentTest(){
         searchPage.isSearchTagPresent();
     }

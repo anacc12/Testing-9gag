@@ -25,8 +25,6 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//*[@id=\"top-nav\"]/div/a")
     WebElement logo;
 
-    @FindBy(xpath =  "//*[@id=\"jsid-post-aj5MM9p\"]/div[2]/ul[1]/li[1]/a")
-    WebElement upvote;
 
     public LoginPage(){
         PageFactory.initElements(driver, this);
@@ -44,9 +42,6 @@ public class LoginPage extends TestBase {
         return logo.isDisplayed();
     }
 
-    public void upvote() {
-        upvote.click();
-    }
 
     public HomePage login(String uname, String pass){
         loginButton.click();
