@@ -87,7 +87,7 @@ Contains methods:
 &#x1F539; login(String username, String password) - method which performs login using the username and password defined in the properties file and returns the HomePage object.  
 
 #### HomePage
-Uses the same annotations and constructor as the LoginPage.
+Uses the same annotations and constructor as the LoginPage.  
 Contains methods:  
 &#x1F539; changeAvatar() - changes the profile avatar in the profile settings.  
 &#x1F539; uploadImage() - one of the main features of the 9gag  
@@ -108,7 +108,7 @@ Contains methods:
 ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
 driver.switchTo().window(tabs.get(i));
 ```
-&#x1F539; AddShirtToCart() - performs adding a shirt with selected size to the cart  
+&#x1F539; AddShirtToCart() - performs adding a shirt with the selected size to the cart  
 
 #### SearchPage
 Contains methods:  
@@ -125,7 +125,7 @@ Contains methods:
 * ShopPageTest - sets driver to the other tab and proceeds to test the functionalities - adding a specific shirt to the cart.
 
 #### LoginPageTest
-In the constructor calls the super(), which initiates the TestBase constructor
+In the constructor calls the super(), which initiates the TestBase constructor.     
 Contains the:  
 &#x1F539; @BeforeMethod - method setUp() which performs initialization and exits the popUp every time the test is performed  
 &#x1F539; @Test methods - loginPageTitleTest(), loginPageLogoTest(), loginPageLoginTest()  
@@ -154,14 +154,14 @@ Contains the:
 Contains the:  
 &#x1F539; @BeforeMethod - similar to the previous ones, but also calls the ShopPage object using the HomePage clickOnShop() method.  
 &#x1F539; @Test method - addToCartTest() - firstly switches to the opened tab using the switchTabs(int i) method. (i=1 in this case) and performs adding a shirt to the cart  
-&#x1F539; @AfterMethod - the same as previous ones  
+&#x1F539; @AfterMethod - the same as the previous ones  
 
-### SearchPageTest
+#### SearchPageTest
 Contains the:  
 &#x1F539; @BeforeMethod - similar to the previous ones, but also calls the SearchPage object using the HomePage clickOnSearch() method.  
 &#x1F539; @Test methods - searchBarTextTest() and isSearchTagPresentTest()
-* searchBarTextTest() - calss the searchBarText(String text) method and accesses the "text" from the properties    
-&#x1F539; @AfterMethod - the same as previous ones.  
+* searchBarTextTest() - calls the searchBarText(String text) method and accesses the "text" from the properties    
+&#x1F539; @AfterMethod - the same as the previous ones.  
 
 
 
