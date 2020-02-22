@@ -108,7 +108,12 @@ browser = chrome
 
 #### LoginPage
 In the constructor uses the PageFactory for initialization.
-Contains @FindBy annotations and WebElement elements found using the xpath of the element.
+Contains @FindBy annotations and WebElement elements found using the xpath of the element.  
+Example:
+```
+@FindBy(xpath = "//*[@id=\"top-nav\"]/div/a")
+WebElement logo;
+```
 Contains methods:   
 &#x1F539; exitPopup() - whenever the 9gag.com website is opened, the popup window appears - it should be closed in order to browse the page  
 &#x1F539; validateTitle() - method which returns the title of the page  
